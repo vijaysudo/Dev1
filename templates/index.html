@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Square Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Square Calculator</h1>
+    </header>
+    <main>
+        <form method="post">
+            <label for="number">Enter a number:</label>
+            <input type="text" id="number" name="number" required>
+            <button type="submit">Calculate Square</button>
+        </form>
+        {% if result %}
+            <p>The square of the entered number is: {{ result }}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Simple Python Project</p>
+    </footer>
+</body>
+</html>
